@@ -11,7 +11,9 @@ class Calculator {
         this.operation = undefined;
         console.log(this.currentOperand, this.previousOperand, this.operation);
     }
-
+    delete() {
+        this.currentOperand = this.currentOperand.slice(0, -1);
+    }
     appendNumber(number) {
         if (this.currentOperand.includes(".") && number === ".") return;
         this.currentOperand =
@@ -26,7 +28,32 @@ class Calculator {
         this.previousOperand = this.currentOperand;
         this.currentOperand = "";
     }
-    accumulation() {}
+    accumulation() {
+        let accumulatedAmount;
+        const prev = parseFloat(this.previousOperand);
+        const cur = parseFloat(this.currentOperand);
+
+        if (isNaN(prev) || isNaN(cur)) return;
+        switch (this.operation) {
+            case "+":
+                accumulatedAmount = prev + cur;
+                break;
+            case "-":
+                accumulatedAmount = prev - cur;
+                break;
+            case "*":
+                accumulatedAmount = prev * cur;
+                break;
+            case "÷":
+                accumulatedAmount = prev / cur;
+                break;
+            default:
+                return;
+        }
+        this.currentOperand = accumulatedAmount;
+        this.operation = undefined;
+        this.previousOperand = "";
+    }
     updateDisplay() {
         this.nextOperandTextValue.innerText = this.currentOperand;
         this.previousOperandTextValue.innerText = this.previousOperand;
@@ -62,6 +89,14 @@ operationBtns.forEach((operationButton) => {
     });
 });
 
+equalBtn.addEventListener("click", function () {
+    calculator.accumulation();
+    calculator.updateDisplay();
+});
+deleteBtn.addEventListener("click", function () {
+    calculator.delete();
+    calculator.updateDisplay();
+});
 allClearBtn.addEventListener("click", function () {
     calculator.clear();
     calculator.updateDisplay();
