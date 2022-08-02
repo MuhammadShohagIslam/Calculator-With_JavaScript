@@ -558,24 +558,144 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.calculatorNumberBtn {
+  position: relative;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(180deg,#86efac, #86efac);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: inset -8px 0px 8px rgba(20, 83, 45, .15), inset 0px -8px 8px rgba(20, 83, 45, .15), 0px 0px 0px 0px rgba(20, 83, 45, .75), 10px 20px 25px rgba(20, 83, 45, .4);
+  --tw-shadow-colored: inset -8px 0px 8px var(--tw-shadow-color), inset 0px -8px 8px var(--tw-shadow-color), 0px 0px 0px 0px var(--tw-shadow-color), 10px 20px 25px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.calculatorNumberBtn::before {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  border-radius: 0.5rem;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+  background-image: linear-gradient(90deg,#86efac, #86efac);
+  --tw-shadow: -5px -5px 15px rgba(20, 83, 45, .1), 10px 5px 10px rgba(20, 83, 45, 0.15);
+  --tw-shadow-colored: -5px -5px 15px var(--tw-shadow-color), 10px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.calculatorOperatorBtn {
+  position: relative;
+  height: 100%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  --tw-shadow: inset -8px 0px 8px rgba(20, 83, 45, .15), inset 0px -8px 8px rgba(20, 83, 45, .15), 0px 0px 0px 0px rgba(20, 83, 45, .75), 10px 20px 25px rgba(20, 83, 45, .4);
+  --tw-shadow-colored: inset -8px 0px 8px var(--tw-shadow-color), inset 0px -8px 8px var(--tw-shadow-color), 0px 0px 0px 0px var(--tw-shadow-color), 10px 20px 25px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.calculatorOperatorBtn::before {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  border-radius: 0.5rem;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+  background-image: linear-gradient(90deg,#86efac, #86efac);
+  --tw-shadow: -5px -5px 15px rgba(20, 83, 45, .1), 10px 5px 10px rgba(20, 83, 45, 0.15);
+  --tw-shadow-colored: -5px -5px 15px var(--tw-shadow-color), 10px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.calculatorActionBtn {
+  position: relative;
+  grid-column: span 2 / span 2;
+  height: 100%;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: inset -8px 0px 8px rgba(20, 83, 45, .15), inset 0px -8px 8px rgba(20, 83, 45, .15), 0px 0px 0px 0px rgba(20, 83, 45, .75), 10px 20px 25px rgba(20, 83, 45, .4);
+  --tw-shadow-colored: inset -8px 0px 8px var(--tw-shadow-color), inset 0px -8px 8px var(--tw-shadow-color), 0px 0px 0px 0px var(--tw-shadow-color), 10px 20px 25px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.calculatorActionBtn::before {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  z-index: 0;
+  border-radius: 0.5rem;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: -5px -5px 15px rgba(20, 83, 45, .1), 10px 5px 10px rgba(20, 83, 45, 0.15);
+  --tw-shadow-colored: -5px -5px 15px var(--tw-shadow-color), 10px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.calculatorText {
+  position: relative;
+  z-index: 20;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .relative {
   position: relative;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.-top-1 {
+  top: -0.25rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-3 {
+  top: -0.75rem;
 }
 
 .z-20 {
   z-index: 20;
 }
 
-.z-30 {
-  z-index: 30;
-}
-
 .col-span-full {
   grid-column: 1 / -1;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 
 .mb-2 {
@@ -670,10 +790,6 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
-.bg-gradient {
-  background-image: linear-gradient(180deg,#86efac, #86efac);
-}
-
 .p-\[40px_30px_30px\] {
   padding: 40px 30px 30px;
 }
@@ -692,14 +808,9 @@ video {
   line-height: 2.5rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-2xl {
@@ -707,39 +818,13 @@ video {
   line-height: 2rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+.font-bold {
+  font-weight: 700;
 }
 
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-custome {
@@ -754,72 +839,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-button {
-  --tw-shadow: inset -8px 0px 8px rgba(20, 83, 45, .15), inset 0px -8px 8px rgba(20, 83, 45, .15), 0px 0px 0px 0px rgba(20, 83, 45, .75), 10px 20px 25px rgba(20, 83, 45, .4);
-  --tw-shadow-colored: inset -8px 0px 8px var(--tw-shadow-color), inset 0px -8px 8px var(--tw-shadow-color), 0px 0px 0px 0px var(--tw-shadow-color), 10px 20px 25px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.before\:absolute::before {
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.before\:top-3::before {
-  content: var(--tw-content);
-  top: 0.75rem;
-}
-
-.before\:left-3::before {
-  content: var(--tw-content);
-  left: 0.75rem;
-}
-
-.before\:bottom-3::before {
-  content: var(--tw-content);
-  bottom: 0.75rem;
-}
-
-.before\:right-3::before {
-  content: var(--tw-content);
-  right: 0.75rem;
-}
-
-.before\:z-0::before {
-  content: var(--tw-content);
-  z-index: 0;
-}
-
-.before\:rounded-lg::before {
-  content: var(--tw-content);
-  border-radius: 0.5rem;
-}
-
-.before\:border-t::before {
-  content: var(--tw-content);
-  border-top-width: 1px;
-}
-
-.before\:border-l::before {
-  content: var(--tw-content);
-  border-left-width: 1px;
-}
-
-.before\:border-b::before {
-  content: var(--tw-content);
-  border-bottom-width: 1px;
-}
-
 .before\:border-rose-500::before {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(244 63 94 / var(--tw-border-opacity));
-}
-
-.before\:border-green-500::before {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(34 197 94 / var(--tw-border-opacity));
 }
 
 .before\:border-blue-500::before {
@@ -838,27 +861,4 @@ video {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.before\:bg-button::before {
-  content: var(--tw-content);
-  background-image: linear-gradient(90deg,#86efac, #86efac);
-}
-
-.before\:text-white::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.before\:shadow-beforeButton::before {
-  content: var(--tw-content);
-  --tw-shadow: -5px -5px 15px rgba(20, 83, 45, .1), 10px 5px 10px rgba(20, 83, 45, 0.15);
-  --tw-shadow-colored: -5px -5px 15px var(--tw-shadow-color), 10px 5px 10px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.before\:content-\[\'\'\]::before {
-  --tw-content: '';
-  content: var(--tw-content);
 }

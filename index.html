@@ -12,31 +12,81 @@
         <div
             class="relative min-w-[300px] min-h-[400px] bg-green-300 p-[40px_30px_30px] shadow-custome rounded-lg"
         >
-            <div class="relative grid grid-cols-4 grid-rows-5 gap-3 justify-center items-center">
+            <div
+                class="relative grid grid-cols-4 grid-rows-5 gap-3 justify-center items-center"
+            >
                 <div
                     class="h-full flex items-end justify-around col-span-full p-2 break-all border-0 flex-col bg-white rounded-lg mb-2 shadow-output"
                 >
-                    <div data-previous-operand class="text-xl text-gray-900">2223 + </div>
-                    <div data-next-operand class="text-gray-900 text-4xl">3453</div>
+                    <div data-previous-operand class="text-xl text-gray-900">
+                        2223 +
+                    </div>
+                    <div data-next-operand class="text-gray-900 text-4xl">
+                        3453
+                    </div>
                 </div>
-                <button data-all-clear class="text-white rounded-lg text-sm col-span-2 h-full bg-rose-500 shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-rose-700 before:shadow-beforeButton before:border-t before:border-l before:border-b before:z-0 before:border-rose-500 before:text-white" ><span class="z-20 relative text-xl">AC</span></button>
-                <button data-delete class="text-white rounded-lg text-sm h-full bg-white shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-lg">DC</span></button>
-                <button data-operation class="text-black rounded-lg text-sm h-full  bg-white  shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">÷</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">1</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">2</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative">3</span></button>
-                <button data-operation class="text-white rounded-lg text-sm h-full  bg-white  shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">*</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">4</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">5</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">6</span></button>
-                <button data-operation class="text-white rounded-lg text-sm z-30 h-full  bg-white  shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:z-0 before:border-green-500" ><span class="z-20 relative text-2xl">+</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">7</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">8</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">9</span></button>
-                <button data-operation class="text-white rounded-lg text-sm h-full  bg-white  shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">-</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">.</span></button>
-                <button data-number class="text-white rounded-lg text-sm h-full bg-gradient shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-button before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-green-500"><span class="z-20 relative text-2xl">0</span></button>
-                <button data-equal class="text-white rounded-lg text-sm col-span-2 h-full bg-blue-500 shadow-button relative before:content-[''] before:absolute before:top-3  before:left-3 before:bottom-3 before:right-3 before:rounded-lg  before:bg-blue-700 before:shadow-beforeButton before:border-t before:border-l before:border-b before:border-blue-500"><span class="z-20 relative text-2xl">=</span></button>
+                <button
+                    data-all-clear
+                    class="calculatorActionBtn bg-rose-500 before:bg-rose-700 before:border-rose-500"
+                >
+                    <span class="calculatorText text-xl">AC</span>
+                </button>
+                <button data-delete class="calculatorOperatorBtn">
+                    <span class="calculatorText text-lg">DC</span>
+                </button>
+                <button data-operation class="calculatorOperatorBtn">
+                    <span class="calculatorText font-bold">÷</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">1</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">2</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">3</span>
+                </button>
+                <button data-operation class="calculatorOperatorBtn">
+                    <span class="calculatorText top-1 font-bold">*</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">4</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">5</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">6</span>
+                </button>
+                <button data-operation class="calculatorOperatorBtn">
+                    <span class="calculatorText font-bold">+</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">7</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">8</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">9</span>
+                </button>
+                <button data-operation class="calculatorOperatorBtn">
+                    <span class="calculatorText font-bold">-</span>
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText font-bold -top-3 text-4xl"
+                        >.</span
+                    >
+                </button>
+                <button data-number class="calculatorNumberBtn">
+                    <span class="calculatorText">0</span>
+                </button>
+                <button
+                    data-equal
+                    class="calculatorActionBtn bg-blue-500 before:bg-blue-700 before:border-blue-500"
+                >
+                    <span class="calculatorText">=</span>
+                </button>
             </div>
         </div>
         <script></script>
