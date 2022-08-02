@@ -54,12 +54,40 @@ class Calculator {
         this.operation = undefined;
         this.previousOperand = "";
     }
+    getDisplayNumber(number) {
+        const stringNumber = number.toString();
+        const integerDigit = parseFloat(stringNumber.split(".")[0]);
+        const decimalDigit = stringNumber.split(".")[1];
+        let integerDisplay;
+
+        if (isNaN(integerDigit)) {
+            integerDisplay = "";
+        } else {
+            integerDisplay = integerDigit.toLocaleString("en", {
+                maximumFractionDigits: 0,
+            });
+        }
+        if (decimalDigit != null) {
+            return `${integerDisplay}.${decimalDigit}`;
+        } else {
+            return integerDisplay;
+        }
+    }
     updateDisplay() {
-        this.nextOperandTextValue.innerText = this.currentOperand;
-        this.previousOperandTextValue.innerText = this.previousOperand;
+        this.nextOperandTextValue.innerText = this.getDisplayNumber(
+            this.currentOperand
+        );
+        if (this.operation != null) {
+            this.previousOperandTextValue.innerText = `${this.getDisplayNumber(
+                this.previousOperand
+            )}${this.operation}`;
+        } else {
+            this.previousOperandTextValue.innerText = "";
+        }
     }
 }
 
+// grab indentity from the html file
 const numberBtns = document.querySelectorAll("[data-number]");
 const operationBtns = document.querySelectorAll("[data-operation]");
 const equalBtn = document.querySelector("[data-equal]");
@@ -70,11 +98,13 @@ const previousOperandTextValue = document.querySelector(
 );
 const nextOperandTextValue = document.querySelector("[data-next-operand]");
 
+// create a calculator instance
 const calculator = new Calculator(
     previousOperandTextValue,
     nextOperandTextValue
 );
 
+// add number to the appendNumber method
 numberBtns.forEach((numberButton) => {
     numberButton.addEventListener("click", function () {
         calculator.appendNumber(numberButton.innerText);
@@ -82,6 +112,7 @@ numberBtns.forEach((numberButton) => {
     });
 });
 
+// add operator to the chooseOperation method
 operationBtns.forEach((operationButton) => {
     operationButton.addEventListener("click", function () {
         calculator.chooseOperation(operationButton.innerText);
@@ -89,6 +120,7 @@ operationBtns.forEach((operationButton) => {
     });
 });
 
+// calculation and get total value with accumalation method
 equalBtn.addEventListener("click", function () {
     calculator.accumulation();
     calculator.updateDisplay();
@@ -101,4 +133,3 @@ allClearBtn.addEventListener("click", function () {
     calculator.clear();
     calculator.updateDisplay();
 });
-// calculator.clear()
