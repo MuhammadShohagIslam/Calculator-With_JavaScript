@@ -1,9 +1,51 @@
-const numberButton = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operation]')
-const equalButton = document.querySelector('[data-equal]')
-const deleteButton = document.querySelector('[data-delete]');
-const allClearButton = document.querySelector('[data-all-clear]');
-const previousOperandButton = document.querySelector('[data-previous-operand]');
-const nextOperandButton = document.querySelector('[data-next-operand]');
+// make a calculator class
+class Calculator {
+    constructor(previousOperandTextValue, nextOperandTextValue) {
+        this.previousOperandTextValue = previousOperandTextValue;
+        this.nextOperandTextValue = nextOperandTextValue;
+        this.clear();
+    }
+    clear() {
+        this.currentOperand = "";
+        this.previousOperand = "";
+        this.operation = undefined;
+        console.log(this.currentOperand, this.previousOperand, this.operation);
+    }
+    delete() {
+        this.nextOperandTextValue.innerText = "";
+    }
+    appendNumber(number) {
+        if (this.currentOperand.includes(".") && number === ".") return;
+        this.currentOperand =
+            this.currentOperand.toString() + number.toString();
+    }
+    chooseOperation(operation) {}
+    accumulation() {}
+    updateDisplay() {
+        this.nextOperandTextValue.innerText = this.currentOperand;
+    }
+}
 
-console.log(numberButton)
+const numberBtns = document.querySelectorAll("[data-number]");
+const operationBtns = document.querySelectorAll("[data-operation]");
+const equalBtn = document.querySelector("[data-equal]");
+const deleteBtn = document.querySelector("[data-delete]");
+const allClearBtn = document.querySelector("[data-all-clear]");
+const previousOperandTextValue = document.querySelector(
+    "[data-previous-operand]"
+);
+const nextOperandTextValue = document.querySelector("[data-next-operand]");
+
+const calculator = new Calculator(
+    previousOperandTextValue,
+    nextOperandTextValue
+);
+
+numberBtns.forEach((numberButton) => {
+    numberButton.addEventListener("click", function () {
+        calculator.appendNumber(numberButton.innerText);
+        calculator.updateDisplay();
+    });
+});
+
+// calculator.clear()
